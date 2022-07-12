@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<TargetFramework>net6-macos</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<RootNamespace>NativeBindingsLib</RootNamespace>
+	<AssemblyName>NativeBindingsLib</AssemblyName>
+	<IsPackable>false</IsPackable>
+	<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <IsBindingProject>true</IsBindingProject>
+	<NoBindingEmbedding>true</NoBindingEmbedding>
+  </PropertyGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="/System/Library/Frameworks/ScriptingBridge.framework" Kind="Framework" />
+  </ItemGroup>
+</Project>
